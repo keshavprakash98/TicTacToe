@@ -9,6 +9,7 @@ namespace TicTacToe
             Console.WriteLine("Hello World!");
             TicTacToe obj = new TicTacToe();
             obj.CreateBoard();
+            obj.UserInput();
         }
     }
 }
