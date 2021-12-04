@@ -6,8 +6,7 @@ namespace TicTacToe
 {
     class TicTacToe
     {
-        public const char X = 'X';
-        public const char O = 'O';
+        char player, computer;
 
         public void CreateBoard()
         {
@@ -20,22 +19,20 @@ namespace TicTacToe
         }
         public void UserInput()
         {
-            Console.WriteLine("Enter you Choice from O/X :");
-            char playerChoice = Convert.ToChar(Console.ReadLine());
-            if (playerChoice == 'X')
+            Console.WriteLine("Please choose which letter you want to take-- X or O");
+            char letter = Convert.ToChar(Console.ReadLine());
+            if (letter == 'X')
             {
-                Console.WriteLine("Player Chose " + playerChoice);
-                Console.WriteLine("Computer Chose " + O);
-            }
-            else if (playerChoice == 'O')
-            {
-                Console.WriteLine("Player Chose " + playerChoice);
-                Console.WriteLine(" Computer Chose " + X);
+                player = 'X';
+                computer = 'O';
             }
             else
             {
-                Console.WriteLine("Entered invalid input  ");
+                player = 'O';
+                computer = 'X';
             }
+            Console.WriteLine("Player has chosen {0} and computer {1}", player, computer);
+
         }
 
     }
